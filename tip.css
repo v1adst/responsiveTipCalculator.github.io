@@ -1,0 +1,184 @@
+body {
+  font-family: 'Roboto Mono'; /* Set the font for the entire body */
+  font-size: 18px; /* Default font size */
+  color: #161616; /* Text color */
+}
+
+#globalBox {
+  background-color: #898a8a; /* Light gray background */
+  display: flex;
+  flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
+  height: fit-content; /* Adjust height based on content */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 500px) {
+  #globalBox {
+    max-width: 100%; /* Full width for small screens */
+    min-width: 100%; /* Ensure full width for each container */
+  }
+}
+
+.conteiners {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column; /* Vertical column layout */
+  margin: 10px; /* Spacing between containers */
+  background-color: #ffffff; /* White background for containers */
+  flex-grow: 1; /* Containers grow equally (50/50) */
+  flex-basis: 0; /* Ignore default width */
+  min-width: 300px; /* Minimum width for each container */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+  border-radius: 8px; /* Rounded corners for containers */
+}
+
+label {
+  margin-bottom: 10px; /* Space below labels */
+}
+
+#amountInput {
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Arrange elements in a vertical column */
+  align-items: flex-start; /* Align elements to the left */
+}
+
+/* Remove the spinner buttons (+ and -) from number input */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; /* Hides the spinner */
+  margin: 0; /* Removes margin around the spinner */
+}
+
+option {
+  font-family: 'Roboto Mono'; /* Font style for dropdown options */
+  font-size: 14px; /* Smaller font size for dropdown */
+}
+
+#amount {
+  font-family: 'Roboto Mono'; /* Font style for the amount input */
+  font-size: 18px; /* Font size for the amount input */
+  width: 100%; /* Full width of the container */
+  padding: 8px; /* Space inside the input box */
+  border: 2px solid #8a8a89; /* Border color */
+  box-sizing: border-box; /* Include padding in the total width/height */
+  border-radius: 8px; /* Rounded corners for the amount input */
+}
+
+#numberOfPeopleSelector {
+  padding: 10px; /* Padding inside the people selector container */
+  margin-bottom: 10px; /* Space below the selector */
+}
+
+#peopleSelector {
+  width: 100%; /* Full width for the dropdown */
+  height: 28px; /* Height of the dropdown */
+  border-radius: 8px; /* Rounded corners */
+  text-align: left; /* Align the text to the left */
+  padding: 4px; /* Padding inside the dropdown */
+}
+
+#tipSelectors {
+  padding: 10px;
+  padding-top: 0; /* Remove top padding */
+  display: flex;
+  flex-direction: column; /* Arrange elements in a vertical column */
+  align-items: flex-start; /* Align elements to the left */
+  margin-bottom: 10px; /* Space below the tip selectors */
+}
+
+#buttons {
+  display: flex;
+  flex-wrap: wrap; /* Wrap buttons on smaller screens */
+  gap: 10px; /* Space between buttons */
+}
+
+/* Style the divs as buttons */
+.tipButton {
+  display: inline-block; /* Display as inline block */
+  width: 60px; /* Button width */
+  height: 38px; /* Button height */
+  background-color: #558eca; /* Blue background color for the buttons */
+  color: #ffffff; /* White text color */
+  border: 2px solid transparent; /* Transparent border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  text-align: center; /* Center the text horizontally */
+  line-height: 38px; /* Vertical text alignment */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.tipButton:hover {
+  background-color: #275486; /* Darker blue on hover */
+}
+
+/* Style for the selected percentage display */
+#selectedPercent {
+  order: 1; /* Change the display order */
+  width: 200px; /* Set the width */
+  height: 38px; /* Set the height */
+  font-size: 16px; /* Font size */
+  text-align: left; /* Left-align the text */
+  padding-left: 10px; /* Padding on the left side */
+  line-height: 38px; /* Vertical alignment */
+  border: 1px solid #898a8a; /* Border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: rgb(226, 226, 226); /* Light gray background */
+  color: #161616; /* Text color */
+}
+
+button {
+  font-family: 'Roboto Mono'; /* Font style for buttons */
+  font-size: 18px; /* Font size for buttons */
+  padding: 0;
+  border: 0;
+  border-radius: 8px; /* Rounded corners */
+  height: 38px; /* Button height */
+  background-color: #3167a5; /* Default background color */
+  margin-bottom: 20px; /* Space below the button */
+  margin-left: 10px; /* Left margin */
+  margin-right: 10px; /* Right margin */
+  text-decoration: solid; /* Solid text decoration */
+  color: #ffffff; /* White text color */
+}
+
+button:hover {
+  background-color: #31c545; /* Green background on hover */
+  color: #161616; /* Dark text color on hover */
+  text-decoration: solid; /* Keep text solid */
+}
+
+#reset:hover {
+  color: #161616; /* Dark text color on hover */
+  background-color: #d1b01d; /* Yellow background on hover */
+  text-decoration: solid; /* Keep text solid */
+}
+
+/* Style for the selected button */
+.tipButton.selectedTip {
+  background-color: #31c545; /* Darker green for the selected button */
+  color: white; /* White text */
+}
+
+.tip-total {
+  flex-wrap: wrap; /* Wrap the content */
+  display: flex;
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: space-between; /* Space between elements */
+  margin: 0px;
+  padding: 10px;
+  padding-bottom: 0;
+  background-color: #ffffff; /* White background */
+  flex-grow: 1; /* Containers grow equally */
+  flex-basis: 0; /* Ignore default width */
+  min-width: 300px; /* Minimum width for each container */
+  width: 100%;
+  box-sizing: border-box; /* Include padding in the total width/height */
+  border-radius: 8px; /* Rounded corners */
+}
+
+#tipP {
+  margin: 0; /* No margin for this element */
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip calculator</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+  <link rel="stylesheet" href="tip.css">
+</head>
+<body>
+  <main>
+    <div id="globalBox">
+  <!----------------------Selector box--------------------->
+      <div class="conteiners">
+        <div id="amountInput">
+          <label for="amount">Bill Amount</label>
+          <input type="number" name="amount" id="amount" placeholder="0.00 Σ" step="0.01" min="0">
+        </div>
+    <!--Slect Tip container (call js finction to add elements)-->
+        <div id="tipSelectors">
+          <p id="tipS">Select Tip</p>
+          <div id="buttons">
+            <div class="" id="selectedPercent">Tips to leave: 0%</div>  
+          </div>
+        </div>
+    <!--Number of People container (call js finction to add elements)-->
+        <div id="numberOfPeopleSelector">
+          <label for="peopleSelector">Number of People</label>
+          <select name="PeopleS" id="peopleSelector">
+          </select>
+        </div>
+      </div>
+
+      <!-------------------Results box----------------->
+      <div class="conteiners">
+        <div class="tip-total" id="tipP">
+          <p>Tip Amount /<br>Person</p>
+          <p id="tipOnePerson">0 Σ</p>
+        </div>
+        <div class="tip-total" id="tipT">
+          <p>Total /<br>Person</p>
+          <p id="totalOnePerson">0 Σ</p>
+        </div>
+        <button id="calculate">Calculate</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </main>
+  <script src="tip.js"></script>
+</body>
+</html>
